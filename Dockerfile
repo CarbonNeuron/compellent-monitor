@@ -1,9 +1,12 @@
-FROM golang:1.26-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.26-alpine AS build
 WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
-RUN go test ./... && CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/compellent-monitor .
+RUN go test ./...
+ARG TARGETOS
+ARG TARGETARCH
+RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -trimpath -ldflags="-s -w" -o /out/compellent-monitor .
 
 FROM gcr.io/distroless/static-debian13:nonroot
 LABEL org.opencontainers.image.source="https://github.com/CarbonNeuron/compellent-monitor" \
