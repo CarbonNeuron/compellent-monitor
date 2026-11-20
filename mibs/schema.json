@@ -1,0 +1,2459 @@
+{
+  "mib": "DELL-STORAGE-SC-MIB",
+  "revision": "201401290000Z",
+  "root": ".1.3.6.1.4.1.674.11000.2000.500.1.2",
+  "tables": [
+    {
+      "name": "scCtlrTable",
+      "label": "Controllers",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13",
+      "indexes": [
+        "scCtlrIndex"
+      ]
+    },
+    {
+      "name": "scDiskTable",
+      "label": "Disks",
+      "group": "storage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14",
+      "indexes": [
+        "scDiskIndex"
+      ]
+    },
+    {
+      "name": "scEnclTable",
+      "label": "Enclosures",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15",
+      "indexes": [
+        "scEnclIndex"
+      ]
+    },
+    {
+      "name": "scCtlrFanTable",
+      "label": "Controller Fan Sensors",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16",
+      "indexes": [
+        "scCtlrIndex",
+        "scCtlrFanIndex"
+      ]
+    },
+    {
+      "name": "scCtlrPowerTable",
+      "label": "Controller Power Supplys",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.17",
+      "indexes": [
+        "scCtlrIndex",
+        "scCtlrPowerIndex"
+      ]
+    },
+    {
+      "name": "scCtlrVoltageTable",
+      "label": "Voltage Sensors",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18",
+      "indexes": [
+        "scCtlrIndex",
+        "scCtlrVoltageIndex"
+      ]
+    },
+    {
+      "name": "scCtlrTempTable",
+      "label": "Temperature Sensors",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19",
+      "indexes": [
+        "scCtlrIndex",
+        "scCtlrTempIndex"
+      ]
+    },
+    {
+      "name": "scEnclFanTable",
+      "label": "enclosure Fan Sensors",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.20",
+      "indexes": [
+        "scEnclIndex",
+        "scEnclFanIndex"
+      ]
+    },
+    {
+      "name": "scEnclPowerTable",
+      "label": "enclosure Power Supplys",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.21",
+      "indexes": [
+        "scEnclIndex",
+        "scEnclPowerIndex"
+      ]
+    },
+    {
+      "name": "scEnclIoModTable",
+      "label": "I/O Modules",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.22",
+      "indexes": [
+        "scEnclIndex",
+        "scEnclIoModIndex"
+      ]
+    },
+    {
+      "name": "scEnclTempTable",
+      "label": "Temperature Sensors",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.23",
+      "indexes": [
+        "scEnclIndex",
+        "scEnclTempIndex"
+      ]
+    },
+    {
+      "name": "scEnclAlarmTable",
+      "label": "Audible Alarms",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.24",
+      "indexes": [
+        "scEnclIndex",
+        "scEnclAlarmIndex"
+      ]
+    },
+    {
+      "name": "scDiskFolderTable",
+      "label": "Disk folders",
+      "group": "storage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25",
+      "indexes": [
+        "scDiskFolderIndex"
+      ]
+    },
+    {
+      "name": "scVolumeTable",
+      "label": "Volumes",
+      "group": "storage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.26",
+      "indexes": [
+        "scVolumeIndex"
+      ]
+    },
+    {
+      "name": "scServerTable",
+      "label": "Servers",
+      "group": "connectivity",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27",
+      "indexes": [
+        "scServerIndex"
+      ]
+    },
+    {
+      "name": "scCacheTable",
+      "label": "Cache batteries",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28",
+      "indexes": [
+        "scCacheIndex"
+      ]
+    },
+    {
+      "name": "scScTable",
+      "label": "Storage center",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29",
+      "indexes": [
+        "scScIndex"
+      ]
+    },
+    {
+      "name": "scUPSTable",
+      "label": "UPS",
+      "group": "health",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30",
+      "indexes": [
+        "scUPSIndex"
+      ]
+    },
+    {
+      "name": "scObjCntTable",
+      "label": "Object counts",
+      "group": "storage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31",
+      "indexes": [
+        "scObjCntIndex"
+      ]
+    },
+    {
+      "name": "scDiskFolderSUTable",
+      "label": "Storage usage",
+      "group": "storage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32",
+      "indexes": [
+        "scDiskFolderSUIndex"
+      ]
+    },
+    {
+      "name": "scDiskConfigTable",
+      "label": "Disk configuration",
+      "group": "storage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45",
+      "indexes": [
+        "scDiskConfigIndex"
+      ]
+    },
+    {
+      "name": "scAlertTable",
+      "label": "Alerts",
+      "group": "alerts",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46",
+      "indexes": [
+        "scCtlrIndex",
+        "scAlertIndex"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "productIDDisplayName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.1",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Name of this product for display purposes.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "productIDDescription",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.2",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "A short description of this product.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "productIDVendor",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.3",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "The name of the product manufacturer.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "productIDVersion",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "The version of this product.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "productIDSerialNumber",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "The Dell Service Tag.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "productIDGlobalStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.6",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "Current status of the product. This is a rollup for the entire product including any monitored devices. The status is intended to give initiative to an SNMP monitor to get further data when this status is abnormal. The value here maps from the System Status icon on the SC GUI: grey->unknown, green->ok, yellow->noncritical, red->critical. If the productIDGlobalStatus is not ok then scLastWorstAlert contains the scAlertNbr of the alert that is responsible for the negative status.",
+      "table": "",
+      "enums": {
+        "1": "other",
+        "2": "unknown",
+        "3": "ok",
+        "4": "noncritical",
+        "5": "critical",
+        "6": "nonrecoverable"
+      },
+      "unit": ""
+    },
+    {
+      "name": "productIDBuildNumber",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "The software build number of the product populating the MIB.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "productIDURL",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "The URL of the web-based application to manage this device.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertDef",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.9",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert Definition unique identifier",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.10",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center Index, typically the SC HSN (Hardware Serial Number. Not a true hardware s/n, but a logical s/n on which to assign liensed-features).",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scTestString",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.11",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Test String used by scTestTrap: 'SNMP server subsystem is accessible'",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scMiscAlertString",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.12",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "String used by last scMiscAlert",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller number (same value as scCtlrIndex)",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller status",
+      "table": "scCtlrTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCtlrName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller name",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrIpAddr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller IP Address",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scCtlrStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrModel",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller Model",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrServiceTag",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller Dell Service Tag",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrAssetTag",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.9",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller Asset Tag",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrIPv6Eth0IP",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.10",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller IPv6 Eth0 IP Address",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrIPv6Eth0IPPrefix",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.11",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "controller IPv6 Eth0 IP Addr Prefix Length",
+      "table": "scCtlrTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrLeader",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.13.1.12",
+      "syntax": "TruthValue",
+      "access": "read-only",
+      "status": "current",
+      "description": "bool that tells if this controller is the lead",
+      "table": "scCtlrTable",
+      "enums": {
+        "1": "true",
+        "2": "false"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scDiskNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk number (same value as scDiskIndex)",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk status",
+      "table": "scDiskTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scDiskNamePosition",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk name: format ee-dd where ee is the enclosure number, and dd is the disk number.",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskHealthy",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.5",
+      "syntax": "TruthValue",
+      "access": "read-only",
+      "status": "current",
+      "description": "true(1) indicates that the disk is healthy",
+      "table": "scDiskTable",
+      "enums": {
+        "1": "true",
+        "2": "false"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scDiskStatusMsg",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk status message: set to 'no status message' when scDiskStatus=up",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk api index: used internal to the SC",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scDiskStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskSize",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.9",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk size: raw capacity in GB",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": "GB"
+    },
+    {
+      "name": "scDiskIoPortType",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.10",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk I/O port type (bus type)",
+      "table": "scDiskTable",
+      "enums": {
+        "1": "fibrechannel",
+        "2": "iscsi",
+        "3": "fibrechanneloverethernet",
+        "4": "sas",
+        "5": "unknown"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scDiskEnclosure",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.14.1.11",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk enclosure index",
+      "table": "scDiskTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure number (same value as scEnclIndex)",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure status",
+      "table": "scEnclTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scEnclName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure name",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclStatusDescr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure status description",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclType",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure type",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclModel",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure model",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scEnclStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclServiceTag",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.9",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Dell Service Tag",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclAssetTag",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.10",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Asset Tag",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.15.1.11",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure api index: used internal to the SC",
+      "table": "scEnclTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrFanNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan number (same value as scCtlrFanIndex)",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrFanStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan status",
+      "table": "scCtlrFanTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCtlrFanName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan name",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrFanCurrentRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan current rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanNormMaxRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.6",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan normal maximum rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanNormMinRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan normal minimum rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanWarnLwrRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.8",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan warning lower threshold rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanWarnUprRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.9",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan warning-level upper threshold rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanCritLwrRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.10",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan crtical-level lower threshold rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanCritUprRpm",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.11",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan crtical-level upper threshold rpm",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": "RPM"
+    },
+    {
+      "name": "scCtlrFanForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.12",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scCtlrCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrFanApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.16.1.13",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "fan api index: used internal to the SC",
+      "table": "scCtlrFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrPowerNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.17.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Power Supply number (same value as scCtlrPowerIndex)",
+      "table": "scCtlrPowerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrPowerStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.17.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Power Supply status",
+      "table": "scCtlrPowerTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCtlrPowerName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.17.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Power Supply name",
+      "table": "scCtlrPowerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrPowerForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.17.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scCtlrCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scCtlrPowerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrVoltageNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Voltage Sensor number (same value as scCtlrVoltageIndex)",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrVoltageStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Sensor status",
+      "table": "scCtlrVoltageTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCtlrVoltageName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Sensor name",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrVoltageCurrentV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Current Voltage",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageNormMaxV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Normal Maximum",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageNormMinV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Normal Minimum",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageWarnLwrV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Warning-level Lower Threshold",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageWarnUprV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.9",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Warning-level Upper Threshold",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageCritLwrV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.10",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Critical-level Lower Threshold",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageCritUprV",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.11",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Voltage Critical-level Upper Threshold",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": "V"
+    },
+    {
+      "name": "scCtlrVoltageForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.18.1.12",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scCtlrCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scCtlrVoltageTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrTempNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Temp Sensor number (same value as scCtlrTempIndex)",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrTempStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor status",
+      "table": "scCtlrTempTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCtlrTempName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor name",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCtlrTempCurrentC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Current Temperature in Celcius",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempNormMaxC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.6",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Normal Maximum Temp in Celcius",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempNormMinC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Normal Minimum Temp in Celcius",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempWarnLwrC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.8",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Warning-level Lower Threshold",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempWarnUprC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.9",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Warning-level Upper Threshold",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempCritLwrC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.10",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Critical-level Lower Threshold",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempCritUprC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.11",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Controller Temp Sensor Critical-level Upper Threshold",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scCtlrTempForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.19.1.12",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scCtlrCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scCtlrTempTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclFanNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.20.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan number (same value as scEnclFanIndex)",
+      "table": "scEnclFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclFanStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.20.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan status",
+      "table": "scEnclFanTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scEnclFanLocation",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.20.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan location",
+      "table": "scEnclFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclFanCurrentS",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.20.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Fan current speed: high, Low, Medium, Off, Unknown",
+      "table": "scEnclFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclFanForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.20.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scEnclCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scEnclFanTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclPowerNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.21.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Encl Power Supply number (same value as scEnclPowerIndex)",
+      "table": "scEnclPowerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclPowerStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.21.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Power Supply status",
+      "table": "scEnclPowerTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scEnclPowerPosition",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.21.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Power Supply position",
+      "table": "scEnclPowerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclPowerForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.21.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scEnclCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scEnclPowerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclIoModNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.22.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Encl I/O Module number (same value as scEnclIoModIndex)",
+      "table": "scEnclIoModTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclIoModStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.22.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure I/O Module status",
+      "table": "scEnclIoModTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scEnclIoModPosition",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.22.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure I/O Module position",
+      "table": "scEnclIoModTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclIoModForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.22.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scEnclCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scEnclIoModTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclTempNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.23.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Encl Temp Sensor number (same value as scEnclTempIndex)",
+      "table": "scEnclTempTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclTempStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.23.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Temp Sensor status",
+      "table": "scEnclTempTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scEnclTempLocation",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.23.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Temp Sensor location",
+      "table": "scEnclTempTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclTempCurrentC",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.23.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Temp Sensor current temperature in Celcius",
+      "table": "scEnclTempTable",
+      "enums": {},
+      "unit": "\u00b0C"
+    },
+    {
+      "name": "scEnclTempForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.23.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scEnclCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scEnclTempTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclAlarmNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.24.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Encl Audible Alarm number (same value as scEnclTempIndex)",
+      "table": "scEnclAlarmTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclAlarmStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.24.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Audible Alarm status",
+      "table": "scEnclAlarmTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scEnclAlarmName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.24.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "enclosure Audible Alarm name",
+      "table": "scEnclAlarmTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scEnclAlarmForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.24.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scEnclCompStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scEnclAlarmTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk folder number (same value as scDiskFolderIndex)",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder status",
+      "table": "scDiskFolderTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder name",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderCapcty",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "deprecated",
+      "description": "deprecated: Disk Folder capacity calcualted as totalSpace - usedSpace",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": "GB"
+    },
+    {
+      "name": "scDiskFolderAlrtThr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.6",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder alert threshold",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder api index: used internal to the SC",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scDiskFolderStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderCapcty2",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.25.1.9",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder capacity is same as scDiskFolderSUFreeSpace",
+      "table": "scDiskFolderTable",
+      "enums": {},
+      "unit": "GiB"
+    },
+    {
+      "name": "scVolumeNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.26.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Volume number (same value as scVolumeIndex)",
+      "table": "scVolumeTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scVolumeStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.26.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Volume status",
+      "table": "scVolumeTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scVolumeName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.26.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Volume name",
+      "table": "scVolumeTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scVolumeApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.26.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Volume api index: used internal to the SC",
+      "table": "scVolumeTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scVolumeForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.26.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scVolumeStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scVolumeTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scServerNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Managed Server number (same value as scServerIndex)",
+      "table": "scServerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scServerStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Managed Server status",
+      "table": "scServerTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scServerName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Managed Server name",
+      "table": "scServerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scServerCnctvy",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.5",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "Managed Server connectivity",
+      "table": "scServerTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "partial"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scServerPathCount",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.6",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Managed Server path count: the number of primary paths from the server to the SC",
+      "table": "scServerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scServerApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Server api index: used internal to the SC",
+      "table": "scServerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scServerForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.27.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scServerStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scServerTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCacheNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Cache number (same value as scCacheIndex)",
+      "table": "scCacheTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCacheStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Cache status",
+      "table": "scCacheTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCacheName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Cache name",
+      "table": "scCacheTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCacheBatStat",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28.1.5",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Cache Battery Status",
+      "table": "scCacheTable",
+      "enums": {
+        "0": "noBattery",
+        "1": "normal",
+        "2": "expirationPending",
+        "3": "expired"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scCacheBatExpr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28.1.6",
+      "syntax": "DateAndTime",
+      "access": "read-only",
+      "status": "current",
+      "description": "Ctlr Cache Battery Expiration Date",
+      "table": "scCacheTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scCacheForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.28.1.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scCacheStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scCacheTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center number (same value as scScIndex)",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center status",
+      "table": "scScTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scScName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center name. Can be changed via sysName.",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScContact",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center contact. Can be changed via sysContact.",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScLocation",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center location. Can be changed via sysLocation.",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScPortsBal",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.7",
+      "syntax": "TruthValue",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center ports balanced",
+      "table": "scScTable",
+      "enums": {
+        "1": "true",
+        "2": "false"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scScMgmtIP",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center management IP addr",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScSerial",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.9",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center serial number",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.10",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scLocalPortsStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScIPv6MgmtIP",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.11",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center IPv6 mgmt IP address",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scScIPv6MgmtIPPrefix",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.29.1.12",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Storage Center IPv6 mgmt IP addr prefix length",
+      "table": "scScTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scUPSNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Monitored UPS number (same value as scUPSIndex)",
+      "table": "scUPSTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scUPSStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.3",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Monitored UPS status",
+      "table": "scUPSTable",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scUPSName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Monitored UPS name",
+      "table": "scUPSTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scUPSBatLife",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Monitored UPS battery life",
+      "table": "scUPSTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scUPSStatusDescr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Monitored UPS status description",
+      "table": "scUPSTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scUPSApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "UPS api index: used internal to the SC",
+      "table": "scUPSTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scUPSForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.30.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "SET to 'ForceTrap' forces a scMonitoredUPSStatusChange trap. GET always returns the string 'Empty'.",
+      "table": "scUPSTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scObjCntNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Object Count number (same value as scObjCntIndex)",
+      "table": "scObjCntTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scObjCntDevsInUse",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31.1.3",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Number of Devices In Use",
+      "table": "scObjCntTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scObjCntReplays",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31.1.4",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Numbers of Replays",
+      "table": "scObjCntTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scObjCntDisks",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Numbers of Disks",
+      "table": "scObjCntTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scObjCntServers",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31.1.6",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Numbers of Servers",
+      "table": "scObjCntTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scObjCntVolumes",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.31.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Numbers of Volumes",
+      "table": "scObjCntTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderSUNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk folder storage usage number (same value as scDiskFolderSUIndex)",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskFolderSUTotalSpace",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.3",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "deprecated",
+      "description": "Disk Folder Storage Usage total space, in GB (1,000,000,000). Replaced by scDiskFolderSUTotalSpace2.",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GB"
+    },
+    {
+      "name": "scDiskFolderSUUsedSpace",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.4",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "deprecated",
+      "description": "Disk Folder Storage Usage used space, in GB (1,000,000,000). Replaced by scDiskFolderSUUsedSpace2",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GB"
+    },
+    {
+      "name": "scDiskFolderSUTotalSpace2",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.5",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder Storage Usage total space, in GB (1,073,741,824). Matches 'Total disk space' on SC GUI.",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GiB"
+    },
+    {
+      "name": "scDiskFolderSUUsedSpace2",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.6",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder Storage Usage used space, in GB (1,073,741,824). Matches 'Allocated space used by volumes' on SC GUI.",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GiB"
+    },
+    {
+      "name": "scDiskFolderSUAllocSpace",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.7",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder Storage Usage allocated space, in GB (1,073,741,824). Matches 'Total space allocated for volume use' minus 'Unhealthy/Bad disk space' on SC GUI.",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GiB"
+    },
+    {
+      "name": "scDiskFolderSUFreeSpace",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.8",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder Storage Usage free space, in GB (1,073,741,824). scDiskFolderSUFreeSpace = scDiskFolderSUTotalSpace2 - scDiskFolderSUAllocSpace - scDiskFolderSUUsedSpace2. Matches 'Unallocated disk space' on SC GUI.",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GiB"
+    },
+    {
+      "name": "scDiskFolderSUSpareSpace",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.32.1.9",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Folder Storage Usage spare space, in GB (1,073,741,824). Matches 'spares available' on SC GUI.",
+      "table": "scDiskFolderSUTable",
+      "enums": {},
+      "unit": "GiB"
+    },
+    {
+      "name": "scSIDeviceType",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.33",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "SCSI Initiator Device Type",
+      "table": "",
+      "enums": {
+        "1": "disk",
+        "2": "unknown"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scSIDeviceStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.34",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "SCSI Initiator Device Status",
+      "table": "",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scHWCompStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.35",
+      "syntax": "ScStatus",
+      "access": "read-only",
+      "status": "current",
+      "description": "Last Hardware Component Status sent with scCtlrCompStatusChange and scEnclCompStatusChange.",
+      "table": "",
+      "enums": {
+        "1": "up",
+        "2": "down",
+        "3": "degraded"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scHWCompName",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.36",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Last Hardware Component Name sent with scCtlrCompStatusChange and scEnclCompStatusChange.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scHWCompPosition",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.37",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Last Hardware Component Position sent with scCtlrCompStatusChange and scEnclCompStatusChange.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scHWCompType",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.38",
+      "syntax": "ScHardwareType",
+      "access": "read-only",
+      "status": "current",
+      "description": "Last Hardware Component Type sent with scCtlrCompStatusChange and scEnclCompStatusChange.",
+      "table": "",
+      "enums": {
+        "1": "fan",
+        "2": "powersupply",
+        "3": "tempsensor",
+        "4": "voltagesensor",
+        "5": "iomodule",
+        "6": "audiblealarm"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scHWCompState",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.39",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Last Hardware Component State sent with scCtlrCompStatusChange and scEnclCompStatusChange. Has meaning only in case of ScHardwareType = tempsensor, voltagesensor, or fan.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scTrapAction",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.40",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Recommend action associated with the most recent trap.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertMsg",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.41",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert message associated with the most recent trap.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scForceTrap",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.42",
+      "syntax": "SnmpAdminString",
+      "access": "read-write",
+      "status": "current",
+      "description": "For software development use.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scTrapNormalized",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.43",
+      "syntax": "TruthValue",
+      "access": "read-only",
+      "status": "current",
+      "description": "Trap-normalized boolean flag: true means that the associated alert condition is now normal, i.e., that alert has cleared.",
+      "table": "",
+      "enums": {
+        "1": "true",
+        "2": "false"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scLastWorstAlert",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.44",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "If the productIDGlobalStatus is not ok then scLastWorstAlert contains the scAlertNbr of the alert that is responsible for the negative status.",
+      "table": "",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "disk config number (same value as scDiskFolderIndex)",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigSerial",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.3",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Config serial number",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigVendor",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.4",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Config vendor name",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigProduct",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Config product description",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigModel",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.6",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk vendor + product description",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigRev",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk revision",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scDiskConfigApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.45.1.8",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Disk Config api index: used internal to the SC",
+      "table": "scDiskConfigTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertNbr",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.2",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "alert number (same value as scalertIndex)",
+      "table": "scAlertTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertStatus",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.3",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert status",
+      "table": "scAlertTable",
+      "enums": {
+        "0": "complete",
+        "1": "critical",
+        "2": "degraded",
+        "3": "deleting",
+        "4": "down",
+        "5": "emergency",
+        "6": "inform",
+        "7": "okay",
+        "8": "unavailable",
+        "9": "unknown"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scAlertApiIndex",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.4",
+      "syntax": "Unsigned32",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert api index: used internal to the SC",
+      "table": "scAlertTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertDefinition",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.5",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert definition",
+      "table": "scAlertTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertCategory",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.6",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert status",
+      "table": "scAlertTable",
+      "enums": {
+        "0": "connectivity",
+        "1": "disk",
+        "2": "hardware",
+        "3": "storage",
+        "4": "system",
+        "5": "unknown"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scAlertCreateTime",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.7",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert creation time",
+      "table": "scAlertTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertMessage",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.8",
+      "syntax": "SnmpAdminString",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert message",
+      "table": "scAlertTable",
+      "enums": {},
+      "unit": ""
+    },
+    {
+      "name": "scAlertType",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.9",
+      "syntax": "INTEGER",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert type",
+      "table": "scAlertTable",
+      "enums": {
+        "0": "alert",
+        "1": "indiction",
+        "3": "unknown"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scAlertAcknowledged",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.10",
+      "syntax": "TruthValue",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert-acknowledged boolean flag tells whether alert has been acknowledged via the SC GUI",
+      "table": "scAlertTable",
+      "enums": {
+        "1": "true",
+        "2": "false"
+      },
+      "unit": ""
+    },
+    {
+      "name": "scAlertActive",
+      "oid": ".1.3.6.1.4.1.674.11000.2000.500.1.2.46.1.11",
+      "syntax": "TruthValue",
+      "access": "read-only",
+      "status": "current",
+      "description": "Alert-active boolean flag tells whether alert is active. 'false' = alert has been cleared.",
+      "table": "scAlertTable",
+      "enums": {
+        "1": "true",
+        "2": "false"
+      },
+      "unit": ""
+    }
+  ]
+}

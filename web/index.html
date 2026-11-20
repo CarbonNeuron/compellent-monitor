@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b111b">
+  <title>Compellent · Storage monitor</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-array" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01M12 6.5h5M12 17.5h5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-disk" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="10" r="1"/><path d="M8 18h.01M12 18h4"/></symbol>
+    <symbol id="i-health" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 4 16 4 16 0V5M4 12v7c0 4 16 4 16 0v-7"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="6" rx="1"/><rect x="2" y="16" width="7" height="6" rx="1"/><rect x="15" y="16" width="7" height="6" rx="1"/><path d="M12 8v4M5.5 16v-4h13v4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20zM12 9v5M12 17h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M6 15l5-7 4 4 6-7"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 3l-4 18"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7a9 9 0 0 0-15-2L3 7M3 2v5h5M4 17a9 9 0 0 0 15 2l2-2M21 22v-5h-5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M3 16v5h18v-5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="i-temp" viewBox="0 0 24 24"><path d="M9 14V5a3 3 0 0 1 6 0v9a5 5 0 1 1-6 0M12 7v10"/><circle cx="12" cy="18" r="1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </svg>
+  <aside class="sidebar">
+    <a href="#overview" class="brand"><span class="brand-mark"><svg class="icon"><use href="#i-array"/></svg></span><span>compellent<span class="brand-sub">STORAGE OBSERVABILITY</span></span></a>
+    <div class="nav-label">WORKSPACE</div>
+    <nav id="nav" aria-label="Dashboard views"></nav>
+    <div class="sidebar-bottom"><span class="eyebrow">MONITORED ARRAY</span><strong id="side-name">Connecting…</strong><span class="mono" id="side-target">SNMP v2c</span><div class="readonly"><svg class="icon"><use href="#i-health"/></svg> Read-only monitoring</div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">Infrastructure <span>/</span> Storage <span>/</span> <strong id="breadcrumb-name">Compellent</strong></div><div class="live-indicator" id="live-status"><span class="status-dot"></span> Connecting</div></header>
+    <main>
+      <div class="page-heading"><div><div class="eyebrow" id="page-eyebrow">STORAGE CENTER</div><h1 id="page-title">Array overview</h1><p id="page-description">A live view of your storage infrastructure.</p></div><div class="heading-actions"><span class="updated" id="updated">Waiting for first sample</span><button class="button icon-button" id="refresh" title="Reload latest collected sample" aria-label="Reload latest collected sample"><svg class="icon"><use href="#i-refresh"/></svg></button><a class="button" href="/api/export" download><svg class="icon"><use href="#i-download"/></svg> Export</a></div></div>
+      <div id="connection-banner" role="status" aria-live="polite"></div>
+      <div class="view-tools" id="view-tools" hidden><label class="search-box"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="search" placeholder="Search this view…" aria-label="Search this view"></label><div id="view-filters"></div></div>
+      <div id="content" aria-busy="true"><div class="empty-state"><svg class="icon"><use href="#i-array"/></svg><h2>Discovering your storage center</h2><p>The first SNMP walk is in progress. This page updates automatically.</p></div></div>
+      <footer><span>DELL-STORAGE-SC-MIB <span class="muted">·</span> SNMP v2c</span><span id="footer-info">Polling the configured array</span></footer>
+    </main>
+  </div>
+  <dialog id="detail"><div class="dialog-header"><div><span class="eyebrow">OBJECT DETAILS</span><h2 id="detail-title"></h2></div><button class="button icon-button" id="close-detail" aria-label="Close details"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="detail-body"></div></dialog>
+</body>
+</html>
